@@ -6,7 +6,6 @@ var MyFirstComponent = function() {
   return React.createElement(
     'div',
     null,
-
     React.createElement(MyTitle, null),
     React.createElement(MyTitle, null),
     React.createElement(MyTitle, null)
