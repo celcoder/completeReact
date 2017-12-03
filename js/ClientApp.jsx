@@ -14,8 +14,8 @@ const MyFirstComponent = function() {
     ce(MyTitle, { title: 'Game of Thrones', color: 'YellowGreen' }),
     ce(MyTitle, { title: 'Stranger Things', color: 'GreenYellow' }),
     ce(MyTitle, { title: 'Rick and Morty', color: 'LimeGreen' }),
-    ce(MyTitle, { title: 'Silicon Valley', color: 'peru' })
+    ce(MyTitle, { title: 'hose of cards', color: 'peru' })
   );
 };
 
-ReactDOM.render(ce(MyFirstComponent), document.getElementById('app'));
+render(ce(MyFirstComponent), document.getElementById('app'));
