@@ -10,6 +10,7 @@ class Landing extends Component {
   props: {
     searchTerm: string,
     handleSearchTermChange: Function,
+    goToSearchState: Function,
     history: RouterHistory
   };
   goToSearch = (event: SyntheticEvent) => {
@@ -28,7 +29,7 @@ class Landing extends Component {
             placeholder="Search"
           />
         </form>
-        <Link to="/search">or Browse All</Link>
+        <Link to="/search" onClick={this.props.goToSearchState}>or Browse All</Link>
       </div>
     );
   }
@@ -36,8 +37,11 @@ class Landing extends Component {
 
 const mapStateToProps = state => ({ searchTerm: state.searchTerm });
 const mapDispatchToProps = (dispatch: Function) => ({
-  handleSearchTermChange(event) {
+  handleSearchTermChange: event => {
     dispatch(setSearchTerm(event.target.value));
+  },
+  goToSearchState: () => {
+    dispatch(setSearchTerm(''));
   }
 });
 
